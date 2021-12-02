@@ -1,4 +1,4 @@
-# Spigot NewAPI 1.18
+# Spigot Changes 1.18
 
 ## Changes / 変更点
 
