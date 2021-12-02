@@ -224,7 +224,7 @@ public boolean sendChunkChange(@NotNull Location loc, int sx, int sy, int sz, @N
   Objective registerNewObjective(@NotNull String name, @NotNull String criteria, @NotNull String displayName) throws IllegalArgumentException;
 ```
 
-スコアボード名に使える文字数が 40 から 32767 になりました。
+スコアボード名に使える文字数が 16 から 32767 になりました。
 
 ### Future API / 将来
 
