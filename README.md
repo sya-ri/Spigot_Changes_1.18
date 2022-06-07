@@ -20,7 +20,7 @@ Minecraft 1.18 からは Java17 以降が必要になりました。Azul Zulu �
 
 ### API Changes / API の変更
 
-> You may also need to view a complete summary of the API changes between 1.17.1 and 1.18.x through this [link](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11). Need to know, there are no intentional API breakages, however there may be slight unavoidable changes. So, here’s a list of API changes that includes:
+> You may also need to view a complete summary of the API changes between 1.17.1 and 1.18.x through this [link](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11). Need to know, there are no intentional API breakages, however there may be slight unavoidable changes. So, here’s a list of API changes that includes:
 > - Java 17 comes to change behaviour, especially if reflection is used.
 > - MySQL has been upgraded to the 8.x driver series. Furthermore, this driver may be more strict in some operations.
 > - Google GSON and Guava have been bumped to the newer versions per Mojang.
@@ -28,7 +28,7 @@ Minecraft 1.18 からは Java17 以降が必要になりました。Azul Zulu �
 > - The world height will extend to less than 0 and greater than 256.
 > - There might have been extensive internal changes to biome code and world generation. You can also report as bugs about any plugin-facing changes at this stage are not intentional.
 
-また、1.17.1 と 1.18.x 間のAPI変更点は、こちらの[リンク](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11) から確認できます。意図的なAPIの破損はありませんが、やむを得ない若干の変更があることを知っておく必要があります。そこで、以下にAPIの変更点を列挙します。
+また、1.17.1 と 1.18.x 間のAPI変更点は、こちらの[リンク](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11) から確認できます。意図的なAPIの破損はありませんが、やむを得ない若干の変更があることを知っておく必要があります。そこで、以下にAPIの変更点を列挙します。
 
 - リフレクションを使用している場合、Java17 で動作が変更されます。
 - MySQL が 8.x ドライバシリーズにアップグレードされました。さらに、このドライバーは、いくつかの操作でより厳密になる可能性があります。
@@ -39,7 +39,7 @@ Minecraft 1.18 からは Java17 以降が必要になりました。Azul Zulu �
 
 #### Pickup / 一部の変更を紹介
 
-##### ・[Block.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11#src/main/java/org/bukkit/block/Block.java)
+##### ・[Block.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11#src/main/java/org/bukkit/block/Block.java)
 
 ###### Add / 追加
 
@@ -58,7 +58,7 @@ boolean canPlace(@NotNull BlockData data);
 
 ブロックに適用できるブロックデータであるかを判定できます。
 
-##### ・[Player.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11#src/main/java/org/bukkit/entity/Player.java)
+##### ・[Player.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11#src/main/java/org/bukkit/entity/Player.java)
 
 ###### Add / 追加
 
@@ -171,7 +171,7 @@ public boolean sendChunkChange(@NotNull Location loc, int sx, int sy, int sz, @N
 
 `sendChunkChange` という非推奨メソッドが削除されました。
 
-##### ・[PotionEffectType.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11#src/main/java/org/bukkit/potion/PotionEffectType.java)
+##### ・[PotionEffectType.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11#src/main/java/org/bukkit/potion/PotionEffectType.java)
 
 ```diff
 - public abstract class PotionEffectType {
@@ -180,7 +180,7 @@ public boolean sendChunkChange(@NotNull Location loc, int sx, int sy, int sz, @N
 
 `PotionEffectType` に `Keyed` インターフェースが継承されました。
 
-##### [Objective.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11#src/main/java/org/bukkit/scoreboard/Objective.java)
+##### [Objective.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11#src/main/java/org/bukkit/scoreboard/Objective.java)
 
 ```diff
   /**
@@ -199,7 +199,7 @@ public boolean sendChunkChange(@NotNull Location loc, int sx, int sy, int sz, @N
 
 スコアに使える文字数が 40 から 32767 になりました。
 
-##### [Scoreboard.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=refs%2Fheads%2Fmaster&targetRepoId=11#src/main/java/org/bukkit/scoreboard/Scoreboard.java)
+##### [Scoreboard.java](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit/compare/diff?targetBranch=d32e3c764edd6a449ddd220720185d266c2193f9&sourceBranch=6a039faf7488beba29527a112404cbab84d0cbd3&targetRepoId=11#src/main/java/org/bukkit/scoreboard/Scoreboard.java)
 
 ```diff
   /**
